@@ -1,0 +1,136 @@
+.primary-btn {
+    background-color: #0d6efd;
+    color: white;
+    height: 54px;
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+    padding: 14px 24px;
+    border: 3px solid rgba(234,243,252, 0.01);
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+}
+.primary-btn:hover {
+    background-color: #025ce2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.primary-btn:active {
+    background-color: #0d6efd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 3px solid #77a6ed;
+    transform: translateY(0);
+}
+
+.primary-btn-flat {
+    color: #fc784d;
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+    padding: 14px 24px;
+    height: 54px;
+    border: 3px solid rgba(234,243,252, 0.01);
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.1s ease-in-out;
+
+
+}
+.primary-btn-flat:hover {
+    background-color: #ffdbcf;
+    color: #fc784d;
+    transform: translateY(-2px);
+}
+.primary-btn-flat:active {
+    background-color: rgba(252, 120, 77, 0);
+    border: 3px solid #ffab8f;
+    transform: translateY(0);
+}
+
+
+
+
+.button__icon {
+    display: inline-flex;
+    margin-right: 8px;
+}
+.button__text {
+    padding-top: 4px;
+    width: auto;
+    display: inline-block;
+}
+
+
+.button__icon__flat {
+    color: #ffab8f;
+    display: inline-flex;
+    margin-right: 8px;
+}
+.button__text__flat {
+    padding-top: 4px;
+    width: auto;
+    display: inline-block;
+}
+
+.input-container {
+    position: relative;
+    width: 359px;
+    padding: 19px 0;
+}
+
+input {
+    height: 54px;
+    width: 100%;
+    border: 1px solid #93b8df;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+input, .label .text {
+    font-size: 16px;
+}
+
+.label .text {
+    transition: all 0.15s ease-out;
+    color: grey;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+
+input:focus + .label .text, :not(input[value=""]) + .label .text {
+    font-size: 12px;
+    transform: translate(0, -150%);
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+input:focus + .label .text {
+    color: blue;
+}

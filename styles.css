@@ -1,0 +1,398 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--body);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --body: #e8f2fc;
+    --text: #666;
+    --text-light: #627a92;
+    --primary: #0d6efd;
+    --border: #93B8DF;
+
+    --line-height: 24px;
+}
+
+/* ჰედერი */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+}
+
+header p {
+    color: black;
+}
+
+.hompage-button {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 25px;
+}
+
+.right-menu {
+    padding: 6px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #020202;
+    font-size: 16px;
+}
+
+
+/* მთავარი სათაური */
+
+.big-tittle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 115px;
+    width: 886px;
+    border-radius: 0 0 130px 130px;
+    background: #DEECFE;
+    border: 1px solid #C6DEF8;
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+    color: #7B94B6;
+}
+.big-tittle h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* აირჩიეთ მიმართულება */
+
+.choose{
+    text-align: center;
+}
+
+.choose-text{
+    color: #627a92;
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    border-right: 20px solid #e5f0fa;
+    border-left: 20px solid #e5f0fa;
+    top: -30px;
+    background: #e5f0fa;
+    position: relative;
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+
+}
+
+.line {
+
+    border: 2px solid #789CC6;
+    width: 70%;
+    margin: 30px auto 0;
+    display: flex;
+    border-radius: 30px;
+    height: 100%;
+}
+
+
+/* მთავარი ქარდები */
+
+.main-grid {
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    min-width: 350px;
+    border-radius: 36px;
+    border: 2px solid #6C91B9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    justify-content:flex-start;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(0, 0, 0, 0.01);
+    }
+
+    .card:active {
+        box-shadow: 0 10px 20px rgba(2, 92, 226, 0.37);
+        border: 2px solid rgb(13, 110, 253);
+        transform: translateX(5px);
+    }
+
+.card-title {
+    text-align: left;
+}
+
+.card svg{
+    min-width: 70px;
+    min-height: 70px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.main-grid h3 {
+    display: flex;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 15px;
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+
+}
+
+
+
+
+
+@media (max-width: 1580px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1110px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .choose-text{
+        font-size: 24px;
+    }
+
+}
+@media (max-width: 921px) {
+    .big-tittle{
+
+        height: 115px;
+        width: 700px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 717px) {
+    .big-tittle{
+
+        height: 110px;
+        width: 500px;
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 516px) {
+    .big-tittle{
+        height: 100px;
+        width: 400px;
+        font-size: 9px;
+    }
+    .choose-text{
+        font-size: 20px;
+    }
+    .line {
+
+        border: 2px solid rgba(120, 156, 198, 0);
+        width: 90%;
+        margin: 30px auto 0;
+        display: flex;
+    }
+    .container{
+        justify-items: center;
+    }
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
+    bottom: 0;
+}
+.footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'BPG Mrgvlovani Caps', sans-serif;
+    font-size: 18px;
+}
+.footer-left img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    font-family: 'BPG Mrgvlovani Caps', sans-serif;
+    font-size: 18px;
+}
+.footer-right img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+
+
+
+
+.login-right-container-box h1{
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+}
+
+.login-button{
+    display: flex;
+    width: 359px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.login-reg{
+    display: flex;
+    flex-direction: column;
+    width: 359px;
+    justify-content: center;
+    padding-top: 50px;
+}
+.login-right-container-box {
+    width: 479px;
+    height: 557px;
+    border-radius: 50px;
+    background-color: white;
+    padding: 20px;
+    margin: 8vh 8% 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+}
+.login-left-container-box{
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
+    left: 5vh;
+    top: 20vh;
+    font-size: 24px;
+}
+
+
+.main{
+    min-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+@media (max-width: 1400px) {
+
+    .main{
+        flex-direction: column;
+    }
+    .login-left-container-box{
+        left: 0;
+        top: 10vh;
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .login-right-container-box {
+        padding: 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .right-menu{
+        display: none;
+    }
+
+    header{
+        position: absolute;
+        top: 0;
+        height: 50px;
+    }
+
+    .hompage-button{
+        margin: 0 auto;
+    }
+
+    footer {
+        display: none;
+    }
+    .login-left-container-box h1{
+        padding-bottom: 50px;
+        font-size: 24px;
+        min-width: 480px;
+        margin: 0 auto;
+    }
+    .main{
+        width: auto;
+        padding: 0;
+    }
+
+
+}
